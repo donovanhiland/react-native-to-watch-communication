@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ReactNativeAndWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeAndWatchTests.m */; };
-		0718D225E8E6FA9FD97BCFC4 /* libPods-ReactNativeAndWatch-ReactNativeAndWatchTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6E025C5FF8C8A87F490351 /* libPods-ReactNativeAndWatch-ReactNativeAndWatchTests.a */; };
+		04A03F9326A0E9AB006226B0 /* WatchSessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A03F9226A0E9AB006226B0 /* WatchSessionHandler.swift */; };
+		04A03F9826A0E9D0006226B0 /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A03F9726A0E9D0006226B0 /* ViewModelWatch.swift */; };
+		04C1E5F926A0E6F10015225C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C1E5F826A0E6F10015225C /* Assets.xcassets */; };
+		04C1E60026A0E6F20015225C /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04C1E5FF26A0E6F20015225C /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04C1E60526A0E6F20015225C /* ReactNativeAndWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E60426A0E6F20015225C /* ReactNativeAndWatchApp.swift */; };
+		04C1E60726A0E6F20015225C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E60626A0E6F20015225C /* ContentView.swift */; };
+		04C1E60926A0E6F20015225C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E60826A0E6F20015225C /* NotificationController.swift */; };
+		04C1E60B26A0E6F20015225C /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E60A26A0E6F20015225C /* NotificationView.swift */; };
+		04C1E60D26A0E6F20015225C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E60C26A0E6F20015225C /* ComplicationController.swift */; };
+		04C1E60F26A0E6F30015225C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C1E60E26A0E6F30015225C /* Assets.xcassets */; };
+		04C1E61226A0E6F30015225C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C1E61126A0E6F30015225C /* Preview Assets.xcassets */; };
+		04C1E61726A0E6F30015225C /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 04C1E5F626A0E6F00015225C /* watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -17,19 +27,66 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+		04C1E60126A0E6F20015225C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ReactNativeAndWatch;
+			remoteGlobalIDString = 04C1E5FE26A0E6F20015225C;
+			remoteInfo = "watch Extension";
+		};
+		04C1E61526A0E6F30015225C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C1E5F526A0E6F00015225C;
+			remoteInfo = watch;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		04C1E5BB26A0E0200015225C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				04C1E61726A0E6F30015225C /* watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1E61B26A0E6F30015225C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04C1E60026A0E6F20015225C /* watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* ReactNativeAndWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeAndWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ReactNativeAndWatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeAndWatchTests.m; sourceTree = "<group>"; };
+		04A03F9226A0E9AB006226B0 /* WatchSessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionHandler.swift; sourceTree = "<group>"; };
+		04A03F9726A0E9D0006226B0 /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
+		04C1E5BF26A0E0510015225C /* ReactNativeAndWatch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeAndWatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		04C1E5F626A0E6F00015225C /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C1E5F826A0E6F10015225C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04C1E5FA26A0E6F10015225C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C1E5FF26A0E6F20015225C /* watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C1E60426A0E6F20015225C /* ReactNativeAndWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeAndWatchApp.swift; sourceTree = "<group>"; };
+		04C1E60626A0E6F20015225C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04C1E60826A0E6F20015225C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		04C1E60A26A0E6F20015225C /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		04C1E60C26A0E6F20015225C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		04C1E60E26A0E6F30015225C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04C1E61126A0E6F30015225C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04C1E61326A0E6F30015225C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C1E61426A0E6F30015225C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ReactNativeAndWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeAndWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactNativeAndWatch/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ReactNativeAndWatch/AppDelegate.m; sourceTree = "<group>"; };
@@ -47,11 +104,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
+		04C1E5FC26A0E6F20015225C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0718D225E8E6FA9FD97BCFC4 /* libPods-ReactNativeAndWatch-ReactNativeAndWatchTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +139,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04C1E5F726A0E6F00015225C /* watch */ = {
+			isa = PBXGroup;
+			children = (
+				04C1E5F826A0E6F10015225C /* Assets.xcassets */,
+				04C1E5FA26A0E6F10015225C /* Info.plist */,
+			);
+			path = watch;
+			sourceTree = "<group>";
+		};
+		04C1E60326A0E6F20015225C /* watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04C1E60426A0E6F20015225C /* ReactNativeAndWatchApp.swift */,
+				04C1E60626A0E6F20015225C /* ContentView.swift */,
+				04A03F9726A0E9D0006226B0 /* ViewModelWatch.swift */,
+				04C1E60826A0E6F20015225C /* NotificationController.swift */,
+				04C1E60A26A0E6F20015225C /* NotificationView.swift */,
+				04C1E60C26A0E6F20015225C /* ComplicationController.swift */,
+				04C1E60E26A0E6F30015225C /* Assets.xcassets */,
+				04C1E61326A0E6F30015225C /* Info.plist */,
+				04C1E61426A0E6F30015225C /* PushNotificationPayload.apns */,
+				04C1E61026A0E6F30015225C /* Preview Content */,
+			);
+			path = "watch Extension";
+			sourceTree = "<group>";
+		};
+		04C1E61026A0E6F30015225C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04C1E61126A0E6F30015225C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* ReactNativeAndWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +182,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				04C1E5BF26A0E0510015225C /* ReactNativeAndWatch-Bridging-Header.h */,
+				04A03F9226A0E9AB006226B0 /* WatchSessionHandler.swift */,
 			);
 			name = ReactNativeAndWatch;
 			sourceTree = "<group>";
@@ -104,7 +196,6 @@
 				FD457A7C3201A4B90061C36A /* Pods-ReactNativeAndWatch-ReactNativeAndWatchTests.debug.xcconfig */,
 				3CA49E894CA418467E296660 /* Pods-ReactNativeAndWatch-ReactNativeAndWatchTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +222,8 @@
 				13B07FAE1A68108700A75B9A /* ReactNativeAndWatch */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ReactNativeAndWatchTests */,
+				04C1E5F726A0E6F00015225C /* watch */,
+				04C1E60326A0E6F20015225C /* watch Extension */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				29188C1D27ECF07856D8B97B /* Pods */,
@@ -144,7 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* ReactNativeAndWatch.app */,
-				00E356EE1AD99517003FC87E /* ReactNativeAndWatchTests.xctest */,
+				04C1E5F626A0E6F00015225C /* watch.app */,
+				04C1E5FF26A0E6F20015225C /* watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,26 +246,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ReactNativeAndWatchTests */ = {
+		04C1E5F526A0E6F00015225C /* watch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeAndWatchTests" */;
+			buildConfigurationList = 04C1E61C26A0E6F30015225C /* Build configuration list for PBXNativeTarget "watch" */;
 			buildPhases = (
-				8662177496B84946E9C986DE /* [CP] Check Pods Manifest.lock */,
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-				435F63FFC634F3BBF22FB89D /* [CP] Embed Pods Frameworks */,
-				FA9177B28A7822770B0ED2EF /* [CP] Copy Pods Resources */,
+				04C1E5F426A0E6F00015225C /* Resources */,
+				04C1E61B26A0E6F30015225C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+				04C1E60226A0E6F20015225C /* PBXTargetDependency */,
 			);
-			name = ReactNativeAndWatchTests;
-			productName = ReactNativeAndWatchTests;
-			productReference = 00E356EE1AD99517003FC87E /* ReactNativeAndWatchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = watch;
+			productName = watch;
+			productReference = 04C1E5F626A0E6F00015225C /* watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		04C1E5FE26A0E6F20015225C /* watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C1E61826A0E6F30015225C /* Build configuration list for PBXNativeTarget "watch Extension" */;
+			buildPhases = (
+				04C1E5FB26A0E6F20015225C /* Sources */,
+				04C1E5FC26A0E6F20015225C /* Frameworks */,
+				04C1E5FD26A0E6F20015225C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watch Extension";
+			productName = "watch Extension";
+			productReference = 04C1E5FF26A0E6F20015225C /* watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		13B07F861A680F5B00A75B9A /* ReactNativeAndWatch */ = {
 			isa = PBXNativeTarget;
@@ -185,10 +292,12 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				2C5E67759B946D4EB897A6C0 /* [CP] Embed Pods Frameworks */,
 				CA87246A7F95F7FFED9E637A /* [CP] Copy Pods Resources */,
+				04C1E5BB26A0E0200015225C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04C1E61626A0E6F30015225C /* PBXTargetDependency */,
 			);
 			name = ReactNativeAndWatch;
 			productName = ReactNativeAndWatch;
@@ -201,14 +310,17 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
+					04C1E5F526A0E6F00015225C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					04C1E5FE26A0E6F20015225C = {
+						CreatedOnToolsVersion = 12.4;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -226,16 +338,27 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* ReactNativeAndWatch */,
-				00E356ED1AD99517003FC87E /* ReactNativeAndWatchTests */,
+				04C1E5F526A0E6F00015225C /* watch */,
+				04C1E5FE26A0E6F20015225C /* watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
+		04C1E5F426A0E6F00015225C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C1E5F926A0E6F10015225C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C1E5FD26A0E6F20015225C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C1E61226A0E6F30015225C /* Preview Assets.xcassets in Resources */,
+				04C1E60F26A0E6F30015225C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,23 +405,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch/Pods-ReactNativeAndWatch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		435F63FFC634F3BBF22FB89D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		69B6F92228EDFE6728733720 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,28 +427,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8662177496B84946E9C986DE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CA87246A7F95F7FFED9E637A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,23 +442,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch/Pods-ReactNativeAndWatch-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA9177B28A7822770B0ED2EF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests/Pods-ReactNativeAndWatch-ReactNativeAndWatchTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -399,11 +466,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
+		04C1E5FB26A0E6F20015225C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ReactNativeAndWatchTests.m in Sources */,
+				04C1E60926A0E6F20015225C /* NotificationController.swift in Sources */,
+				04C1E60726A0E6F20015225C /* ContentView.swift in Sources */,
+				04C1E60D26A0E6F20015225C /* ComplicationController.swift in Sources */,
+				04C1E60526A0E6F20015225C /* ReactNativeAndWatchApp.swift in Sources */,
+				04A03F9826A0E9D0006226B0 /* ViewModelWatch.swift in Sources */,
+				04C1E60B26A0E6F20015225C /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				04A03F9326A0E9AB006226B0 /* WatchSessionHandler.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,62 +492,150 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+		04C1E60226A0E6F20015225C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ReactNativeAndWatch */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+			target = 04C1E5FE26A0E6F20015225C /* watch Extension */;
+			targetProxy = 04C1E60126A0E6F20015225C /* PBXContainerItemProxy */;
+		};
+		04C1E61626A0E6F30015225C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C1E5F526A0E6F00015225C /* watch */;
+			targetProxy = 04C1E61526A0E6F30015225C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
+		04C1E61926A0E6F30015225C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD457A7C3201A4B90061C36A /* Pods-ReactNativeAndWatch-ReactNativeAndWatchTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ReactNativeAndWatchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 77SAW76597;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeAndWatch.app/ReactNativeAndWatch";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeAndWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
 			};
 			name = Debug;
 		};
-		00E356F71AD99517003FC87E /* Release */ = {
+		04C1E61A26A0E6F30015225C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CA49E894CA418467E296660 /* Pods-ReactNativeAndWatch-ReactNativeAndWatchTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ReactNativeAndWatchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 77SAW76597;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-					"$(inherited)",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeAndWatch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		04C1E61D26A0E6F30015225C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = watch_Extension;
+				INFOPLIST_FILE = watch/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeAndWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeAndWatch.app/ReactNativeAndWatch";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		04C1E61E26A0E6F30015225C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = watch_Extension;
+				INFOPLIST_FILE = watch/Info.plist;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeAndWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
 			};
 			name = Release;
 		};
@@ -498,6 +659,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeAndWatch;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeAndWatch-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +685,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeAndWatch;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeAndWatch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -582,11 +745,7 @@
 					/usr/lib/swift,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
-					"\"$(inherited)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -640,11 +799,7 @@
 					/usr/lib/swift,
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
-					"\"$(inherited)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -654,11 +809,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeAndWatchTests" */ = {
+		04C1E61826A0E6F30015225C /* Build configuration list for PBXNativeTarget "watch Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
+				04C1E61926A0E6F30015225C /* Debug */,
+				04C1E61A26A0E6F30015225C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C1E61C26A0E6F30015225C /* Build configuration list for PBXNativeTarget "watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C1E61D26A0E6F30015225C /* Debug */,
+				04C1E61E26A0E6F30015225C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
